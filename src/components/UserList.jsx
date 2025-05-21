@@ -5,7 +5,7 @@ const API = import.meta.env.VITE_API_URL;
 
 function UserList({ users, onUserChanged }) {
   const handleDelete = async id => {
-    await axios.delete(`${API}/api/users`);
+    await axios.delete(`${API}/users/${id}`);
     onUserChanged();
   };
 
