@@ -12,7 +12,7 @@ function UserForm({ onUserAdded }) {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    await axios.post(`${API}/api/users/${id}`);
+    await axios.post(`${API}${id}`);
     setForm({ name: '', email: '', age: '' });
     onUserAdded();
   };
